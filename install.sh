@@ -49,7 +49,9 @@ sudo apt install -y python3 python-is-python3 git python3-rosdep python3-pip pyt
 
 # Poetry
 echo "Installing Poetry...:"
-curl -sSL https://install.python-poetry.org | python3 -
+#curl -sSL https://install.python-poetry.org | python3 -
+pip install poetry==1.8.5
+
 if ! grep -q 'export PATH="$HOME/.local/bin"' ~/.bashrc; then
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 fi
